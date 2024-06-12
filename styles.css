@@ -1,0 +1,82 @@
+
+:root{
+  --vermelho: #7D0A0A;
+  --bege: #F3EDC8;
+
+
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.cabecalho{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--vermelho);
+  width: auto;
+  height: 10em;
+}
+.titulo{
+  color: var(--bege);
+  font-size: 36px;
+}
+body{
+  background-color: var(--bege);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cartao{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+}
+.card {
+  width: 300px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.message {
+  display: none;
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+}
+.card.open .message {
+  display: block;
+}
+.rodape{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 5em;
+  background-color: var(--vermelho);
+  color: var(--bege);
+}
+
+@media (min-width: 480px){
+  body{
+    height: auto;
+    width: auto;
+  }
+  .cartao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4em;
+
+  }
+}
+  
